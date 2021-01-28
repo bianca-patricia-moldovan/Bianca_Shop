@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bianca_Shop.Views.ReturnPage">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Editor Placeholder="userID" Text="{Binding userID}" HeightRequest="100" />
+            <Editor Placeholder="productID" Text="{Binding productID}" HeightRequest="100" />
+            <Editor Placeholder="userComment" Text="{Binding userComment}" HeightRequest="100" />
+            <Editor Placeholder="status" Text="{Binding status}" HeightRequest="100" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Save" Clicked="OnSaveButtonClicked" />
+                <Button Grid.Column="1" Text="Delete" Clicked="OnDeleteButtonClicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

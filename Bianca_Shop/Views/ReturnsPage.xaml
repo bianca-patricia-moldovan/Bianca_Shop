@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bianca_Shop.Views.ReturnsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="+ Add Return" Clicked="OnReturnAddedClicked" />
+    </ContentPage.ToolbarItems>
+
+    <ListView x:Name="listView" Margin="20" RowHeight="150" ItemSelected="OnListViewItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" Margin="10">
+                        <Label Text="{Binding ID, StringFormat='Return ID: {0}'}"  FontAttributes="Bold" TextColor="Black" />
+                        <Label Text="{Binding userID, StringFormat='User ID: {0}'}" TextColor="Black" />
+                        <Label Text="{Binding productID, StringFormat='Product ID: {0}'}" TextColor="Black" />
+                        <Label Text="{Binding userComment, StringFormat='User comment: {0}'}" TextColor="Black" />
+                        <Label Text="{Binding status, StringFormat='Status: {0}'}" TextColor="Black" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>
